@@ -1,8 +1,19 @@
 ---
 import GitHub from "./icons/GitHub.astro"
 import NextJS from "./icons/NextJS.astro"
+import Html from "./icons/Html.astro"
+import Css from "./icons/Css.astro"
+import JavaScript from "./icons/JavaScript.astro"
+import Photoshop from "./icons/Photoshop.astro"
+import Figma from "./icons/Figma.astro"
+import Illustrator from "./icons/Illustrator.astro"
+import CapCut from "./icons/Capcut.astro"
+import PremierPro from "./icons/PremierPro.astro"
 import Tailwind from "./icons/Tailwind.astro"
+import Behance from "./icons/Behance.astro"
 import Link from "./icons/Link.astro"
+import Youtube from "./icons/Youtube.astro"
+import Instagram from "./icons/Instagram.astro"
 import LinkButton from "./LinkButton.astro"
 
 const TAGS = {
@@ -16,37 +27,110 @@ const TAGS = {
     class: "bg-[#003159] text-white",
     icon: Tailwind,
   },
+  HTML: {
+    name: "Html",
+    class: "bg-[#003159] text-white",
+    icon: Html,
+  },
+  CSS: {
+    name: "Css",
+    class: "bg-[#003159] text-white",
+    icon: Css,
+  },
+  JAVASCRIPT: {
+    name: "JavaScript",
+    class: "bg-[#003159] text-white",
+    icon: JavaScript,
+  },
+  PHOTOSHOP: {
+    name: "Photoshop",
+    class: "bg-[#003159] text-white",
+    icon: Photoshop,
+  },
+  FIGMA: {
+    name: "Figma",
+    class: "bg-[#003159] text-white",
+    icon: Figma,
+  },
+  PREMIERPRO: {
+    name: "Premier Pro",
+    class: "bg-[#003159] text-white",
+    icon: PremierPro,
+  },
+  ILLUSTRATOR: {
+    name: "Illustrator",
+    class: "bg-[#003159] text-white",
+    icon: Illustrator,
+  },
+  CAPCUT: {
+    name: "Capcut",
+    class: "bg-[#003159] text-white",
+    icon: CapCut,
+  },
+  BEHANCE: {
+    name: "Behance",
+    class: "bg-[#003159] text-white",
+    icon: Behance,
+  },
 }
 const PROJECTS = [
   {
-    title: "SVGL - A beautiful library with SVG logos",
+    title: "MaxiVallas",
     description:
-      "Biblioteca de logos SVG de las marcas más populares. +10k visitas al mes. +2K svgs descargados. Creado desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://svgl.vercel.app/",
-    github: "https://github.com/pheralb/svgl",
-    image: "/projects/svgl.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+      "Lideré el desarrollo y diseño del sitio web para Maxivallas, un proyecto que fusionó creatividad y programación.",
+    link: "https://maxivallas.netlify.app/",
+    github: "https://github.com/haderrenteria13/maxivallas-project",
+    image: "/projects/maxivallas.jpg",
+    tags: [TAGS.HTML, TAGS.FIGMA, TAGS.CSS, TAGS.JAVASCRIPT],
   },
   {
-    title: "AdventJS - Retos de programación con JavaScript y TypeScript",
+    title: "Muchachones",
     description:
-      "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://adventjs.dev",
-    image: "/projects/adventjs.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+      "Director Creativo del podcast Muchachones, encargado del diseño y edición de videos.",
+    youtube: "https://www.youtube.com/@Muchachones_",
+    instagram: "https://www.instagram.com/muchachones___/",
+    behance: "https://www.behance.net/gallery/193286449/Muchachones",
+    image: "/projects/muchachones.jpg",
+    tags: [TAGS.ILLUSTRATOR, TAGS.PREMIERPRO, TAGS.PHOTOSHOP],
+  },
+  {
+    title: "PixelVerse",
+    description:
+      "En PixelVerse soy el creador de la marca el Social Media Designer, encargado de la creación de contenido visual para redes sociales.",
+    instagram: "https://www.instagram.com/pixelverse.col/",
+    behance: "https://www.behance.net/gallery/192883833/PixelVerse-Graphic-design",
+    image: "/projects/pixelverse.jpg",
+    tags: [TAGS.PHOTOSHOP, TAGS.CAPCUT],
+  },
+  {
+    title: "StreetWorld",
+    description:
+      "Una tienda virtual de ropa StreetWear, donde soy el encargado de la creación visual de la marca y el diseño de las prendas.",
+    instagram: "https://www.instagram.com/streetworld.co/",
+    behance: "https://www.behance.net/gallery/193286881/StreetWorld",
+    image: "/projects/street-world.jpg",
+    tags: [TAGS.PHOTOSHOP, TAGS.ILLUSTRATOR],
+  },
+  {
+    title: "La Tribu Express",
+    description:
+      "Responsable de la creación visual de la marca, editar videos y generar contenido para redes sociales para La Tribu Express.",
+    behance: "https://www.behance.net/gallery/193286531/La-Tribu",
+    image: "/projects/la-tribu.jpg",
+    tags: [TAGS.PREMIERPRO, TAGS.CAPCUT, TAGS.PHOTOSHOP, TAGS.ILLUSTRATOR],
   },
 ]
 ---
 
 <div class="flex flex-col gap-y-16">
   {
-    PROJECTS.map(({ image, title, description, tags, link, github }) => (
+    PROJECTS.map(({ image, title, description, tags, link, github, youtube, instagram, behance }) => (
     <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
-  <div class="w-full md:w-1/2">
-    <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-      <img alt="Recién llegado vs 5 años en Nueva Zelanda" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
+    <div class="w-full md:w-1/2">
+      <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-7 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+        <img alt="imagenes proyectos" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" src={image} decoding="async" />
+      </div>
     </div>
-  </div>
 
   <div class="w-full md:w-1/2 md:max-w-lg">
     <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
@@ -72,6 +156,27 @@ const PROJECTS = [
             <LinkButton href={github}>
               <GitHub class="size-6" />
               Code
+              
+            </LinkButton>
+          )}
+          {instagram && (
+            <LinkButton href={instagram}>
+              <Instagram class="size-6" />
+              Instagram
+              
+            </LinkButton>
+          )}
+          {youtube && (
+            <LinkButton href={youtube}>
+              <Youtube class="size-5" />
+              Youtube
+              
+            </LinkButton>
+          )}
+          {behance && (
+            <LinkButton href={behance}>
+              <Behance class="size-5" />
+              Behance
               
             </LinkButton>
           )}

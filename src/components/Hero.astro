@@ -1,48 +1,59 @@
 ---
-const personalImageAlt = "Miguel Ángel"
+const personalImageAlt = "Hader Renteria"
 import Badge from "@/components/Badge.astro"
 import LinkedInIcon from "@/components/icons/LinkedIn.astro"
 import MailIcon from "@/components/icons/Mail.astro"
+import InstagramIcon from "@/components/icons/Instagram.astro"
+import DownloadIcon from "@/components/icons/Donwload.astro"
 import SocialPill from "@/components/SocialPill.astro"
 ---
 
-<div class="max-w-xl">
-  <div class="flex gap-4 mb-4">
-    <img
-      class="rounded-full shadow-lg size-16"
-      src="/midudev.webp"
-      alt={personalImageAlt}
-    />
-    <a
-      href="https://linkedin.com/in/midudev"
-      target="_blank"
-      rel="noopener"
-      class="flex items-center transition md:justify-center md:hover:scale-105"
+<div class="max-w-xl flex">
+  <div class="ml-4">
+    <div class="flex gap-4 mb-4">
+      <img
+        class="rounded-full size-16"
+        src="/logo.png"
+        alt={personalImageAlt}
+      />
+      <a
+        href="https://www.linkedin.com/in/hader-renteria-565119240/"
+        target="_blank"
+        rel="noopener"
+        class="flex items-center transition md:justify-center md:hover:scale-105"
+      >
+        <Badge>Disponible para trabajar</Badge>
+      </a>
+    </div>
+    <h1
+      class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
     >
-      <Badge>Disponible para trabajar</Badge>
-    </a>
+      Hola, soy Hader.
+    </h1>
+    <p class="mt-6 text-xl text-gray-800 dark:text-gray-300">
+      +4 años de experiencia como apasionado Diseñador y Desarrollador Frontend, cultivando mi expertise con la guía de mis mentores y valiosos comentarios.<br>
+      <strong class="gradient">Mi trayectoria se ha centrado en proyectos creativos, diseño de marca y programación, donde he perfeccionado mis habilidades.</strong> 
+      Actualmente, resido en Medellín, Colombia, y estoy profundamente comprometido con el aprendizaje constante y la innovación.
+    </p>
+    <nav class="flex flex-wrap gap-4 mt-8">
+      <SocialPill href="mailto:haderrenteria13az@gmail.com">
+        <MailIcon class="size-4" />
+        Contáctame
+      </SocialPill>
+      <SocialPill href="https://www.linkedin.com/in/hader-renteria-565119240/">
+        <LinkedInIcon class="size-4" />
+        LinkedIn
+      </SocialPill>
+      <SocialPill href="https://www.instagram.com/hader_____13/">
+        <InstagramIcon class="size-4" />
+        Instagram
+      </SocialPill>
+      <div>
+        <SocialPill href="public/cv-hader-renteria.pdf" target="_blank">
+          <DownloadIcon class="size-4" />
+          Curriculum Vitae
+        </SocialPill>
+      </div>
+    </nav>
   </div>
-  <h1
-    class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
-  >
-    Hey, soy midudev
-  </h1>
-  <p
-    class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300"
-  >
-    +15 años de experiencia. <strong
-      >Ingeniero de Software y Creador de Contenido sobre Programación</strong
-    > de Barcelona, España 🇪🇸. Especializado en el desarrollo de aplicaciones web
-    únicas.
-  </p>
-  <nav class="flex flex-wrap gap-4 mt-8">
-    <SocialPill href="mailto:miduga@gmail.com">
-      <MailIcon class="size-4" />
-      Contáctame
-    </SocialPill>
-    <SocialPill href="https://linkedin.com/in/midudev">
-      <LinkedInIcon class="size-4" />
-      LinkedIn
-    </SocialPill>
-  </nav>
 </div>

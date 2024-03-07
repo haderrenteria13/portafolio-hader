@@ -19,9 +19,9 @@ const { description, title } = Astro.props
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/logo.png" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    <title>Hader Renteria</title>
     <ViewTransitions />
   </head>
 
@@ -51,6 +51,13 @@ const { description, title } = Astro.props
         flex-direction: column;
         min-height: 100vh;
         overscroll-behavior: none;
+      }
+
+      .gradient{
+      background: linear-gradient(90deg, #E83E36 28.47%, #2679F6 94.43%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
       }
 
       @media (prefers-reduced-motion: reduce) {
